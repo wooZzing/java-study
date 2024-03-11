@@ -1,20 +1,29 @@
 package chapter05;
 
+import java.util.Scanner;
+
 public class Repeat03 {
     public static void main(String[] args) {
-        int i = 0;  // 반복문의 조건 검사에서 사용할 변수를 초기화합니다.
 
-        for( ; ; ) {
-            System.out.print(i + " ");  // i의 값을 출력합니다.
+        // Scanner 클래스를 이용하여 콘솔로부터 사용자 입력을 받을 수 있는 scanner 객체를 생성합니다.
+        Scanner scanner = new Scanner(System.in);
 
-            // 조건 검사가 없는 for문은 무한 반복하므로 if문으로 반드시 break문을 실행해줘야 합니다.
-            if(i == 4)
-                break;
+        // 설정된 비밀번호를 선언 및 초기화 합니다.
+        String password = "wooZzing";
 
-            i++;  // 반복문을 탈출하기 위해 i의 값을 코드 내부에서 증가시킵니다.
-        }
-        System.out.println();
+        // 사용자로부터 입력 받은 비밀번호를 저장할 변수를 선언합니다.
+        String input;
 
-        System.out.println("반복문이 종료되었습니다.");
+        do {
+            System.out.println("비밀번호를 입력하세요: ");
+            input = scanner.nextLine(); // newxtLine()은 한 줄의 문자열 입력을 읽습니다.
+
+            // equals()은 객체의 내용을 비교합니다.
+            if (!input.equals(password)) {
+                System.out.println("비밀번호가 일치하지 않습니다. 다시 입력해주세요.");
+            }
+        } while (!input.equals(password));
+
+        System.out.println("비밀번호 확인 완료.");
     }
 }

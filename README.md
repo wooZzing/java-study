@@ -9,3 +9,19 @@ The reason for studying Java is to start from the basics and understand the prin
 * Conditional Statements
 * Loops
 * Arrays
+* Object-Oriented Programming (OOP)
+* Classes
+* Objects
+* Instances
+* Encapsulation
+* Class Variables and Instance Variables
+* Methods
+* Class Methods and Instance Methods
+* Recursion
+* Overloading
+* Constructors
+* this
+* this()
+* Inheritance
+* Overriding
+* super
